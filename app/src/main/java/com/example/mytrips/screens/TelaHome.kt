@@ -1,6 +1,7 @@
 package com.example.mytrips.screens
 
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -47,6 +48,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.mytrips.ui.theme.MyTripsTheme
+import org.intellij.lang.annotations.JdkConstants.HorizontalAlignment
 
 
 @Composable
@@ -83,7 +85,9 @@ fun GreetingHome(controleNavegacao: NavHostController) {
                     ) {
                         Card(
                             modifier = Modifier
+                                .padding(end = 6.dp)
                                 .size(height = 60.dp, width = 60.dp),
+                            border = BorderStroke(2.dp, Color(0xffffffff)),
                             shape = CircleShape
                         ) {
                             Image(
@@ -93,6 +97,8 @@ fun GreetingHome(controleNavegacao: NavHostController) {
                             )
                         }
                         Text(
+                            modifier = Modifier
+                                .padding(end = 4.dp),
                             text = "Susanna Hoffs",
                             fontWeight = FontWeight.Light,
                             color = Color.White
@@ -153,11 +159,11 @@ fun GreetingHome(controleNavegacao: NavHostController) {
                                         modifier = Modifier
                                             .size(height = 80.dp, width = 130.dp)
                                             .background(color = Color(0xffCF06F0))
-                                            .padding(20.dp)
-                                            .padding(start = 20.dp),
+                                            .padding(18.dp)
+                                            .padding(start = 18.dp),
                                     ) {
                                         Icon(
-                                            modifier = Modifier.padding(start = 10.dp),
+                                            modifier = Modifier.padding(start = 16.dp),
                                             imageVector = Icons.Default.Landscape,
                                             contentDescription = "",
                                             tint = Color.White
@@ -172,18 +178,18 @@ fun GreetingHome(controleNavegacao: NavHostController) {
                             }
                             item() {
                                 Card(
-                                    modifier = Modifier.padding(start = 8.dp)
+                                    modifier = Modifier.padding(start = 2.dp)
                                 ) {
                                     Column(
 
                                         modifier = Modifier
                                             .size(height = 80.dp, width = 130.dp)
                                             .background(color = Color(0xffEAABF4))
-                                            .padding(20.dp)
+                                            .padding(18.dp)
                                             .padding(start = 20.dp),
                                     ) {
                                         Icon(
-                                            modifier = Modifier.padding(start = 10.dp),
+                                            modifier = Modifier.padding(start = 16.dp),
                                             imageVector = Icons.Default.DownhillSkiing,
                                             contentDescription = "",
                                             tint = Color.White
@@ -206,11 +212,11 @@ fun GreetingHome(controleNavegacao: NavHostController) {
                                         modifier = Modifier
                                             .size(height = 80.dp, width = 130.dp)
                                             .background(color = Color(0xffEAABF4))
-                                            .padding(20.dp)
+                                            .padding(18.dp)
                                             .padding(start = 20.dp),
                                     ) {
                                         Icon(
-                                            modifier = Modifier.padding(start = 10.dp),
+                                            modifier = Modifier.padding(start = 16.dp),
                                             imageVector = Icons.Default.BeachAccess,
                                             contentDescription = "",
                                             tint = Color.White
