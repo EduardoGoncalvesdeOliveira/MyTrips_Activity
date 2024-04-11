@@ -34,6 +34,7 @@ import androidx.compose.material.icons.filled.DownhillSkiing
 import androidx.compose.material.icons.filled.Landscape
 import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
@@ -271,25 +272,26 @@ fun GreetingHome(controleNavegacao: NavHostController) {
                             Card(
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .height(200.dp)
+                                    .height(220.dp)
                                     .padding(horizontal = 20.dp)
-                                    .padding(top = 10.dp)
+                                    .padding(top = 10.dp),
+                                elevation = CardDefaults.cardElevation(6.dp)
                             ) {
                                 Column(
                                     modifier = Modifier
                                         .background(color = Color.White)) {
                                     Surface(
                                         modifier = Modifier
-                                            .height(100.dp)
+                                            .height(106.dp)
                                             .fillMaxWidth()
-                                            .padding(8.dp)
+                                            .padding(4.dp),
+                                        RoundedCornerShape(6.dp)
                                     ) {
                                         Image(
                                             modifier = Modifier,
                                             painter = painterResource(id = R.drawable.london),
                                             contentDescription = "",
-                                            contentScale = ContentScale.Crop
-
+                                            contentScale = ContentScale.Crop,
                                         )
                                     }
 
@@ -299,7 +301,7 @@ fun GreetingHome(controleNavegacao: NavHostController) {
                                             vertical = 2.dp
                                         ),
                                         color = Color(0xffCF06F0),
-                                        fontSize = 18.sp,
+                                        fontSize = 16.sp,
                                         text = "London, 2019"
                                     )
                                     Text(
@@ -311,8 +313,9 @@ fun GreetingHome(controleNavegacao: NavHostController) {
                                     )
 
                                     Text(
-                                        modifier = Modifier.padding(start = 240.dp, top = 5.dp),
+                                        modifier = Modifier.padding(start = 230.dp, top = 10.dp),
                                         color = Color(0xffCF06F0),
+                                        fontSize = 12.sp,
                                         text = "18 Feb - 21 Feb"
                                     )
                                 }

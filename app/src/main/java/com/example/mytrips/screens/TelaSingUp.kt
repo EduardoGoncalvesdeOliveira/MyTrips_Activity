@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
@@ -26,6 +27,7 @@ import androidx.compose.material3.CheckboxDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
@@ -39,7 +41,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import com.example.mytrips.R
+import com.example.mytrips.ui.theme.MyTripsTheme
 
 //@Preview(showSystemUi = true, showBackground = true)
 @Composable
@@ -316,6 +320,19 @@ fun GreetingSignUp(controleNavegacao: NavHostController) {
                 )
             }
 
+        }
+    }
+}
+
+
+@Preview(showSystemUi = true)
+@Composable
+fun TelaSingUp() {
+    MyTripsTheme {
+        Surface(
+            modifier = Modifier.fillMaxSize()
+        ) {
+            GreetingSignUp(controleNavegacao = rememberNavController())
         }
     }
 }
