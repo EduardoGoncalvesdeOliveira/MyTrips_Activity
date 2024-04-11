@@ -43,12 +43,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontFamily.Companion.Monospace
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.mytrips.ui.theme.MyTripsTheme
-import org.intellij.lang.annotations.JdkConstants.HorizontalAlignment
+import java.nio.file.WatchEvent
 
 
 @Composable
@@ -68,7 +70,7 @@ fun GreetingHome(controleNavegacao: NavHostController) {
                 Surface(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(200.dp)
+                        .height(220.dp)
                 ) {
                     Image(
                         painter = painterResource(
@@ -100,6 +102,7 @@ fun GreetingHome(controleNavegacao: NavHostController) {
                             modifier = Modifier
                                 .padding(end = 4.dp),
                             text = "Susanna Hoffs",
+                            fontFamily = FontFamily.Default,
                             fontWeight = FontWeight.Light,
                             color = Color.White
                         )
@@ -140,7 +143,8 @@ fun GreetingHome(controleNavegacao: NavHostController) {
 
                     }
                 }
-                Column {
+                Column (modifier = Modifier
+                    .padding(top = 6.dp)){
                     Text(
                         modifier = Modifier.padding(8.dp),
                         text = "Categories",
