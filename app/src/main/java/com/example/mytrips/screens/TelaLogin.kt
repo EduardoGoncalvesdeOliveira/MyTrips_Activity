@@ -165,7 +165,7 @@ fun GreetingLogin(controleNavegacao: NavHostController) {
                 onClick = {
                     if (emailState.value == "aluno" && passwordState.value == "1234") {
                         mensagemerro.value = ""
-                        controleNavegacao.navigate("SingUo")
+                        controleNavegacao.navigate("Home")
                     } else {
                         mensagemerro.value = "Usuário ou senha incorreta"
                     }

@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.mytrips.screens.GreetingHome
 import com.example.mytrips.screens.GreetingLogin
 import com.example.mytrips.screens.GreetingSignUp
 import com.example.mytrips.ui.theme.MyTripsTheme
@@ -28,6 +29,8 @@ class MainActivity : ComponentActivity() {
                     NavHost(navController = controlNavigation, startDestination = "login") {
                         composable(route = "Login") { GreetingLogin(controlNavigation) }
                         composable(route = "SingUp") { GreetingSignUp(controlNavigation) }
+                        composable(route = "Home") { GreetingHome(controlNavigation) }
+
                     }
                 }
             }
