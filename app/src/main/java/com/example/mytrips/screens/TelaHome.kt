@@ -1,7 +1,6 @@
 package com.example.mytrips.screens
 
 
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -24,10 +23,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.mytrips.R
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
@@ -48,11 +44,12 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import com.example.mytrips.ui.theme.MyTripsTheme
 
 
 @Composable
-fun GreetingHome(controleDeNavegacao: NavHostController) {
+fun GreetingHome(controleNavegacao: NavHostController) {
     MyTripsTheme {
         Surface {
 
@@ -65,7 +62,7 @@ fun GreetingHome(controleDeNavegacao: NavHostController) {
                     .fillMaxHeight()
                     .background(Color(0xffF6F6F6))
             ) {
-                Box(
+                Surface(
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(200.dp)
@@ -84,13 +81,13 @@ fun GreetingHome(controleDeNavegacao: NavHostController) {
                             .padding(8.dp)
                     ) {
                         Card(
-
                             modifier = Modifier
                                 .size(height = 60.dp, width = 60.dp),
                             shape = CircleShape
                         ) {
                             Image(
-                                painter = painterResource(id = R.drawable.susanna_hoffs),
+                                contentScale = ContentScale.Crop,
+                                painter = painterResource(id = R.drawable.matheus),
                                 contentDescription = ""
                             )
                         }
@@ -280,8 +277,8 @@ fun GreetingHome(controleDeNavegacao: NavHostController) {
                             ) {
                                 Column(
                                     modifier = Modifier
-                                ) {
-                                    Card(
+                                        .background(color = Color.White)) {
+                                    Surface(
                                         modifier = Modifier
                                             .height(100.dp)
                                             .fillMaxWidth()
@@ -292,6 +289,7 @@ fun GreetingHome(controleDeNavegacao: NavHostController) {
                                             painter = painterResource(id = R.drawable.london),
                                             contentDescription = "",
                                             contentScale = ContentScale.Crop
+
                                         )
                                     }
 
@@ -305,11 +303,10 @@ fun GreetingHome(controleDeNavegacao: NavHostController) {
                                         text = "London, 2019"
                                     )
                                     Text(
-                                        modifier = Modifier.padding(
-                                            horizontal = 10.dp,
-                                            vertical = 2.dp
-                                        ),
+                                        modifier = Modifier
+                                            .padding(horizontal = 10.dp, vertical = 2.dp),
                                         color = Color(0xffA09C9C),
+                                        fontSize = 12.sp,
                                         text = "London is the capital and largest city of  the United Kingdom, with a population of just under 9 million."
                                     )
 
@@ -332,14 +329,14 @@ fun GreetingHome(controleDeNavegacao: NavHostController) {
     }
 }
 
-//@Preview(showSystemUi = true)
-//@Composable
-//fun TelaHomePreview() {
-//    MyTripsTheme {
-//        Surface(
-//            modifier = Modifier.fillMaxSize()
-//        ) {
-//            TelaHome(controleDeNavegacao)
-//        }
-//    }
-//}
+@Preview(showSystemUi = true)
+@Composable
+fun TelaHomePreview() {
+    MyTripsTheme {
+        Surface(
+            modifier = Modifier.fillMaxSize()
+        ) {
+            GreetingHome(controleNavegacao = rememberNavController())
+        }
+    }
+}

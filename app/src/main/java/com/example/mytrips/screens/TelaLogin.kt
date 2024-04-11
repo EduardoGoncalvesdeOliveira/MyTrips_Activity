@@ -30,6 +30,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import com.example.mytrips.ui.theme.MyTripsTheme
 
 @Composable
@@ -151,7 +152,7 @@ fun GreetingLogin(controleNavegacao: NavHostController) {
 
             // botao
             Button(modifier = Modifier
-                .padding(top = 4.dp)
+                .padding(top = 0.dp)
                 // alinho onde o botao vai ficar: End, Center, Start, Top, Bottom
                 .align(Alignment.End)
                 .size(height = 65.dp, width = 160.dp)
@@ -170,7 +171,7 @@ fun GreetingLogin(controleNavegacao: NavHostController) {
                         mensagemerro.value = "Usuário ou senha incorreta"
                     }
 
-                }) {
+                }) {1
 
                 // text dentro del button
                 Text(
@@ -190,7 +191,7 @@ fun GreetingLogin(controleNavegacao: NavHostController) {
             Row(
                 modifier = Modifier
                     .align(Alignment.End)
-                    .padding(end = 10.dp, top = 8.dp)
+                    .padding(end = 10.dp, top = 4.dp)
             ) {
                 Text(
                     modifier = Modifier
@@ -229,10 +230,10 @@ fun GreetingLogin(controleNavegacao: NavHostController) {
     }
 }
 
-//@Preview(showBackground = true, showSystemUi = true)
-//@Composable
-//fun GreetingPreview() {
-//    MyTripsTheme {
-//        GreetingLogin(controleNavegacao)
-//    }
-//}
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun GreetingPreview() {
+    MyTripsTheme {
+        GreetingLogin(controleNavegacao = rememberNavController())
+    }
+}
