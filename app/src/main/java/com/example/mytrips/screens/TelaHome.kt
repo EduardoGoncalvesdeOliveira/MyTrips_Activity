@@ -323,7 +323,7 @@ fun GreetingHome(controleNavegacao: NavHostController) {
                                     )
 
                                     Text(
-                                        modifier = Modifier.padding(start = 220.dp, top = 10.dp, bottom = 4.dp),
+                                        modifier = Modifier.padding(start = 240.dp, top = 10.dp, bottom = 4.dp),
                                         color = Color(0xffCF06F0),
                                         fontSize = 14.sp,
                                         text = "18 Feb - 21 Feb"
