@@ -89,7 +89,7 @@ fun GreetingSignUp(controleNavegacao: NavHostController) {
                 .align(Alignment.CenterHorizontally)
                 .size(height = 120.dp, width = 100.dp)
                 .padding(top = 20.dp), shape = CircleShape,
-            border = BorderStroke(2.dp, Color(0xffCF06F0))
+            border = BorderStroke(2.dp, Color( 0xffCF06F0))
 
             // basicamente... preparei ele p receber a imagem
 

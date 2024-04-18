@@ -5,7 +5,6 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -44,13 +43,34 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontFamily.Companion.Monospace
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.mytrips.ui.theme.MyTripsTheme
-import java.nio.file.WatchEvent
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material3.Card
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
+import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.unit.dp
+import com.example.mytrips.repositorio.ViagemRepositorio
+import com.example.mytrips.ui.theme.MyTripsTheme
+import com.example.mytrips.utilitarios.encurtaDatas
+import kotlin.time.Duration.Companion.days
 
 
 @Composable
@@ -278,7 +298,7 @@ fun GreetingHome(controleNavegacao: NavHostController) {
                     )
 
                     LazyColumn() {
-                        items(2) {
+                        items(10) {
                             Card(
                                 modifier = Modifier
                                     .fillMaxWidth()
@@ -299,7 +319,7 @@ fun GreetingHome(controleNavegacao: NavHostController) {
                                     ) {
                                         Image(
                                             modifier = Modifier,
-                                            painter = painterResource(id = R.drawable.london),
+                                            painter = if (it.imagem == null) painterResource(id = R.drawable.matheus) else it.imagem!!,
                                             contentDescription = "",
                                             contentScale = ContentScale.Crop,
                                         )

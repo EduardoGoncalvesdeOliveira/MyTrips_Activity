@@ -127,6 +127,7 @@ fun GreetingLogin(controleNavegacao: NavHostController) {
                 onValueChange = {
                     passwordState.value = it
                 },
+                maxLines = 1,
                 modifier = Modifier
                     .padding(top = 10.dp)
                     .size(width = 350.dp, height = 65.dp),
