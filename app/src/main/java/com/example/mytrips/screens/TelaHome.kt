@@ -320,14 +320,14 @@ fun GreetingHome(controleNavegacao: NavHostController) {
                                 ) {
                                     Surface(
                                         modifier = Modifier
-                                            .height(106.dp)
+                                            .height(120.dp)
                                             .fillMaxWidth()
                                             .padding(4.dp),
                                         RoundedCornerShape(6.dp)
                                     ) {
                                         Image(
                                             modifier = Modifier,
-                                            painter = if (it.imagem == null) painterResource(id = R.drawable.matheus) else it.imagem!!,
+                                            painter = if (it.imagem == null) painterResource(id = R.drawable.placeholderimage) else it.imagem!!,
                                             contentDescription = "",
                                             contentScale = ContentScale.Crop,
                                         )
@@ -355,9 +355,11 @@ fun GreetingHome(controleNavegacao: NavHostController) {
                                         horizontalArrangement = Arrangement.End
                                     ){
                                         Text(
+                                            modifier = Modifier
+                                                .padding(vertical = 6.dp),
                                             color = Color(0xffCF06F0),
                                             fontSize = 14.sp,
-                                            text = "18 Feb - 21 Feb",
+                                            text = encurtaDatas(it.dataChegada, it.dataPartida),
                                             textAlign = TextAlign.Right
                                         )
                                     }
