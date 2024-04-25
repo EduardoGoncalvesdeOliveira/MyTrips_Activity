@@ -308,7 +308,7 @@ fun GreetingHome(controleNavegacao: NavHostController) {
                             Card(
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .height(250.dp)
+                                    //.height(250.dp)
                                     .padding(horizontal = 20.dp)
                                     .padding(top = 10.dp),
                                 elevation = CardDefaults.cardElevation(6.dp)
@@ -320,7 +320,7 @@ fun GreetingHome(controleNavegacao: NavHostController) {
                                 ) {
                                     Surface(
                                         modifier = Modifier
-                                            .height(120.dp)
+                                            .height(140.dp)
                                             .fillMaxWidth()
                                             .padding(4.dp),
                                         RoundedCornerShape(6.dp)

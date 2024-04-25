@@ -24,7 +24,8 @@ class ViagemRepositorio {
             1,
             "Porto",
             "Porto é uma cidade costeira no noroeste de Portugal conhecida pelas pontes imponentes e pela produção de vinho do Porto.",
-            LocalDate.of(2019,2, 21),
+            LocalDate.of(2022,2, 21),
+            LocalDate.of(2025,1, 1),
             imagem = painterResource(id = R.drawable.porto)
         )
 
