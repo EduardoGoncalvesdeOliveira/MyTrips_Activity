@@ -66,15 +66,19 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.example.mytrips.repositorio.ViagemRepositorio
 import com.example.mytrips.ui.theme.MyTripsTheme
 import com.example.mytrips.utilitarios.encurtaDatas
+import com.example.mytrips.modelo.Viagem
 import kotlin.time.Duration.Companion.days
 
 
 @Composable
 fun GreetingHome(controleNavegacao: NavHostController) {
+
+    val viagens = ViagemRepositorio().listarTodasAsViagens()
     MyTripsTheme {
         Surface {
 
@@ -163,8 +167,10 @@ fun GreetingHome(controleNavegacao: NavHostController) {
 
                     }
                 }
-                Column (modifier = Modifier
-                    .padding(top = 6.dp)){
+                Column(
+                    modifier = Modifier
+                        .padding(top = 6.dp)
+                ) {
                     Text(
                         modifier = Modifier.padding(8.dp),
                         text = "Categories",
@@ -298,18 +304,20 @@ fun GreetingHome(controleNavegacao: NavHostController) {
                     )
 
                     LazyColumn() {
-                        items(10) {
+                        items(viagens) {
                             Card(
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .height(220.dp)
+                                    .height(250.dp)
                                     .padding(horizontal = 20.dp)
                                     .padding(top = 10.dp),
                                 elevation = CardDefaults.cardElevation(6.dp)
                             ) {
                                 Column(
                                     modifier = Modifier
-                                        .background(color = Color.White)) {
+                                        .background(color = Color.White)
+                                        .fillMaxSize(),
+                                ) {
                                     Surface(
                                         modifier = Modifier
                                             .height(106.dp)
@@ -326,28 +334,34 @@ fun GreetingHome(controleNavegacao: NavHostController) {
                                     }
 
                                     Text(
-                                        modifier = Modifier.padding(
-                                            horizontal = 10.dp,
-                                            vertical = 2.dp
-                                        ),
+                                        modifier = Modifier
+                                            .padding(horizontal = 10.dp, vertical = 2.dp),
                                         color = Color(0xffCF06F0),
                                         fontSize = 16.sp,
-                                        text = "London, 2019"
+                                        text = "${it.destino}, ${it.dataChegada.year}"
                                     )
                                     Text(
                                         modifier = Modifier
-                                            .padding(horizontal = 10.dp, vertical = 2.dp),
+                                            .padding(horizontal = 10.dp, vertical = 6.dp),
                                         color = Color(0xffA09C9C),
                                         fontSize = 12.sp,
-                                        text = "London is the capital and largest city of  the United Kingdom, with a population of just under 9 million."
+                                        text = it.descricao
                                     )
 
-                                    Text(
-                                        modifier = Modifier.padding(start = 240.dp, top = 10.dp, bottom = 4.dp),
-                                        color = Color(0xffCF06F0),
-                                        fontSize = 14.sp,
-                                        text = "18 Feb - 21 Feb"
-                                    )
+                                    Row (
+                                        modifier = Modifier
+                                            .fillMaxWidth()
+                                            .padding(end = 12.dp),
+                                        horizontalArrangement = Arrangement.End
+                                    ){
+                                        Text(
+                                            color = Color(0xffCF06F0),
+                                            fontSize = 14.sp,
+                                            text = "18 Feb - 21 Feb",
+                                            textAlign = TextAlign.Right
+                                        )
+                                    }
+
                                 }
                             }
 
