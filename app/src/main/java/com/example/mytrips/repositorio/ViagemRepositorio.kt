@@ -40,7 +40,7 @@ class ViagemRepositorio {
 
         val franca = Viagem(
             3,
-            "França",
+            "Paris",
                     "A França, na Europa Ocidental, tem cidades medievais, aldeias alpinas e praias mediterrâneas.",
             LocalDate.of(2025,12, 23),
             LocalDate.of(2026,2, 28),

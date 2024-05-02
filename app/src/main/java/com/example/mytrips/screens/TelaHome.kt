@@ -66,6 +66,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.example.mytrips.repositorio.ViagemRepositorio
@@ -149,7 +150,7 @@ fun GreetingHome(controleNavegacao: NavHostController) {
                                     modifier = Modifier.size(height = 20.dp, width = 20.dp)
                                 )
                                 Text(
-                                    text = "You're in Paris",
+                                    text = stringResource(id = R.string.where_are_you),
                                     color = Color.White
                                 )
                             }
@@ -173,7 +174,7 @@ fun GreetingHome(controleNavegacao: NavHostController) {
                 ) {
                     Text(
                         modifier = Modifier.padding(8.dp),
-                        text = "Categories",
+                        text = stringResource(id = R.string.categories),
                         color = Color.Black,
                         fontSize = 16.sp
                     )
@@ -199,7 +200,7 @@ fun GreetingHome(controleNavegacao: NavHostController) {
                                             tint = Color.White
                                         )
                                         Text(
-                                            text = "Montain",
+                                            text = stringResource(id = R.string.montain),
                                             color = Color.White
                                         )
                                     }
@@ -226,7 +227,7 @@ fun GreetingHome(controleNavegacao: NavHostController) {
                                         )
                                         Text(
                                             modifier = Modifier.padding(start = 7.dp),
-                                            text = "Snow",
+                                            text = stringResource(id = R.string.snow),
                                             color = Color.White
                                         )
                                     }
@@ -253,7 +254,7 @@ fun GreetingHome(controleNavegacao: NavHostController) {
                                         )
                                         Text(
                                             modifier = Modifier.padding(start = 7.dp),
-                                            text = "Beach",
+                                            text = stringResource(id = R.string.beach),
                                             color = Color.White
 
                                         )
@@ -281,7 +282,7 @@ fun GreetingHome(controleNavegacao: NavHostController) {
                     shape = RoundedCornerShape(50.dp),
                     placeholder = {
                         Text(
-                            text = "Search your destiny",
+                            text = stringResource(id = R.string.search_your_destiny),
                             color = Color(0xffB7B7B7)
                         )
                     },
@@ -298,7 +299,7 @@ fun GreetingHome(controleNavegacao: NavHostController) {
                 Column {
                     Text(
                         modifier = Modifier.padding(start = 13.dp, bottom = 8.dp),
-                        text = "Past Trips",
+                        text = stringResource(id = R.string.past_trips),
                         color = Color.Black,
                         fontSize = 16.sp
                     )
