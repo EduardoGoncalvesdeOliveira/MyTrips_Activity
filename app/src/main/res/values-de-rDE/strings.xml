@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MyTrips</string>
+
+    <string name="login">Anmeldung</string>
+    <string name="please_sign_in_to_continue">Bitte einloggen, um fortzufahren</string>
+    <string name="password_sign_in">Passwort</string>
+    <string name="sign_in">ANMELDEN</string>
+    <string name="dont_have_an_account">Sie haben noch kein Konto?</string>
+    <string name="sign_up_login">Melden Sie sich an</string>
+
+    <string name="where_are_you">Du bist in Paris</string>
+    <string name="past_trips">Vergangene Reisen</string>
+    <string name="categories">Kategorien</string>
+    <string name="montain">Berg</string>
+    <string name="snow">Schnee</string>
+    <string name="beach">Strand</string>
+    <string name="search_your_destiny">Suchen Sie Ihr Schicksal</string>
+
+    <string name="sign_up">Sign up</string>
+    <string name="create_a_new_account">Create a new account</string>
+    <string name="username">Username</string>
+    <string name="phone">Phone</string>
+    <string name="email">Email</string>
+    <string name="password_sign_up">Password</string>
+    <string name="over_18">Over 18?</string>
+    <string name="create_account">CREATE ACCOUNT</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="sign_in_sign_up">Sign in</string>
+
+</resources>
