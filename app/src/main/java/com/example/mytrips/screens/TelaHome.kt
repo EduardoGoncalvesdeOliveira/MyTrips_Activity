@@ -349,12 +349,12 @@ fun GreetingHome(controleNavegacao: NavHostController) {
                                         text = it.descricao
                                     )
 
-                                    Row (
+                                    Row(
                                         modifier = Modifier
                                             .fillMaxWidth()
                                             .padding(end = 12.dp),
                                         horizontalArrangement = Arrangement.End
-                                    ){
+                                    ) {
                                         Text(
                                             modifier = Modifier
                                                 .padding(vertical = 6.dp),

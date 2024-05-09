@@ -36,6 +36,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -72,7 +73,7 @@ fun GreetingSignUp(controleNavegacao: NavHostController) {
             color = Color(0xffCF06F0),
             fontSize = 40.sp,
             fontWeight = FontWeight.ExtraBold,
-            text = "Sign up"
+            text = stringResource(id = R.string.sign_up)
         )
 
         Text(
@@ -80,7 +81,7 @@ fun GreetingSignUp(controleNavegacao: NavHostController) {
                 .align(Alignment.CenterHorizontally),
             color = Color(0xffA09C9C),
             fontSize = 15.sp,
-            text = "Create a new account"
+            text = stringResource(id = R.string.create_a_new_account)
         )
 
         Card(
@@ -89,7 +90,7 @@ fun GreetingSignUp(controleNavegacao: NavHostController) {
                 .align(Alignment.CenterHorizontally)
                 .size(height = 120.dp, width = 100.dp)
                 .padding(top = 20.dp), shape = CircleShape,
-            border = BorderStroke(2.dp, Color( 0xffCF06F0))
+            border = BorderStroke(2.dp, Color(0xffCF06F0))
 
             // basicamente... preparei ele p receber a imagem
 
@@ -140,7 +141,7 @@ fun GreetingSignUp(controleNavegacao: NavHostController) {
                     .size(width = 350.dp, height = 65.dp)
                     .padding(start = 20.dp, end = 10.dp),
                 shape = RoundedCornerShape(10.dp),
-                label = { Text(text = "Username") },
+                label = { Text(text = stringResource(id = R.string.username)) },
                 leadingIcon = {
                     Icon(
                         imageVector = Icons.Filled.Person,
@@ -170,7 +171,7 @@ fun GreetingSignUp(controleNavegacao: NavHostController) {
                     .size(width = 350.dp, height = 65.dp)
                     .padding(start = 20.dp, end = 10.dp),
                 shape = RoundedCornerShape(10.dp),
-                label = { Text(text = "Phone") },
+                label = { Text(text = stringResource(id = R.string.phone)) },
                 leadingIcon = {
                     Icon(
                         imageVector = Icons.Filled.Call,
@@ -200,7 +201,7 @@ fun GreetingSignUp(controleNavegacao: NavHostController) {
                     .size(width = 350.dp, height = 65.dp)
                     .padding(start = 20.dp, end = 10.dp),
                 shape = RoundedCornerShape(10.dp),
-                label = { Text(text = "Email") },
+                label = { Text(text = stringResource(id = R.string.email)) },
                 leadingIcon = {
                     Icon(
                         imageVector = Icons.Filled.Email,
@@ -229,7 +230,7 @@ fun GreetingSignUp(controleNavegacao: NavHostController) {
                     .size(width = 350.dp, height = 65.dp)
                     .padding(start = 20.dp, end = 10.dp),
                 shape = RoundedCornerShape(10.dp),
-                label = { Text(text = "Password") },
+                label = { Text(text = stringResource(id = R.string.password_sign_up)) },
                 leadingIcon = {
                     Icon(
                         imageVector = Icons.Filled.Lock,
@@ -266,7 +267,7 @@ fun GreetingSignUp(controleNavegacao: NavHostController) {
                 Text(
                     modifier = Modifier.padding(top = 30.dp, start = 20.dp),
                     fontSize = 17.sp,
-                    text = "Over 18?"
+                    text = stringResource(id = R.string.over_18)
                 )
             }
 
@@ -281,7 +282,7 @@ fun GreetingSignUp(controleNavegacao: NavHostController) {
                     modifier = Modifier,
                     fontWeight = FontWeight.ExtraBold,
                     fontSize = 16.sp,
-                    text = "CREATE ACCOUNT"
+                    text = stringResource(id = R.string.create_account)
                 )
             }
 
@@ -294,14 +295,14 @@ fun GreetingSignUp(controleNavegacao: NavHostController) {
                     modifier = Modifier
                         .padding(end = 12.dp),
                     color = Color(0xffA09C9C),
-                    text = "Already have an account?"
+                    text = stringResource(id = R.string.already_have_an_account)
                 )
 
                 Text(
                     modifier = Modifier,
                     color = Color(0xffCF06F0),
                     fontWeight = FontWeight.ExtraBold,
-                    text = "Sign in"
+                    text = stringResource(id = R.string.sign_in_sign_up)
                 )
             }
 
