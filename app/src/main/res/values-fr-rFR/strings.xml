@@ -29,4 +29,18 @@
     <string name="already_have_an_account">Vous avez déjà un compte?</string>
     <string name="sign_in_sign_up">Se connecter</string>
 
+    <string name="london_title">Londres</string>
+    <string name="porto_title">Port</string>
+    <string name="ontario_title">Ontario</string>
+    <string name="paris_title">Paris</string>
+    <string name="osasco_title">Osasco</string>
+    <string name="carapicuiba_title">Carapicuiba</string>
+
+    <string name="london">Londres, capitale de l`Angleterre et du Royaume-Uni, est une ville du XXIe siècle dont l`histoire remonte à l`époque romaine.</string>
+    <string name="porto">Porto est une ville côtière du nord-ouest du Portugal connue pour ses ponts imposants et sa production de vin de Porto.</string>
+    <string name="ontario">L`Ontario est une province canadienne limitrophe des États-Unis et des Grands Lacs.</string>
+    <string name="paris">La France, en Europe occidentale, possède des villes médiévales, des villages alpins et des plages méditerranéennes.</string>
+    <string name="osasco">Osasco est une municipalité brésilienne située dans la région métropolitaine de São Paulo, dans l`État de São Paulo, au Brésil.</string>
+    <string name="carapicuiba">Carapicuíba est une municipalité de l`État de São Paulo, au Brésil, et fait partie de la région métropolitaine de São Paulo.</string>
+
 </resources>

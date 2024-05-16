@@ -18,15 +18,29 @@
     <string name="beach">Strand</string>
     <string name="search_your_destiny">Suchen Sie Ihr Schicksal</string>
 
-    <string name="sign_up">Sign up</string>
-    <string name="create_a_new_account">Create a new account</string>
-    <string name="username">Username</string>
-    <string name="phone">Phone</string>
+    <string name="sign_up">Melden Sie sich an</string>
+    <string name="create_a_new_account">Ein neues Konto erstellen</string>
+    <string name="username">Nutzername</string>
+    <string name="phone">Telefon</string>
     <string name="email">Email</string>
-    <string name="password_sign_up">Password</string>
-    <string name="over_18">Over 18?</string>
-    <string name="create_account">CREATE ACCOUNT</string>
-    <string name="already_have_an_account">Already have an account?</string>
-    <string name="sign_in_sign_up">Sign in</string>
+    <string name="password_sign_up">Passwort</string>
+    <string name="over_18">Über 18?</string>
+    <string name="create_account">BENUTZERKONTO ERSTELLEN</string>
+    <string name="already_have_an_account">Sie haben bereits ein Konto?</string>
+    <string name="sign_in_sign_up">anmelden</string>
+
+    <string name="london_title">London</string>
+    <string name="porto_title">Hafen</string>
+    <string name="ontario_title">Ontario</string>
+    <string name="paris_title">Paris</string>
+    <string name="osasco_title">Osasco</string>
+    <string name="carapicuiba_title">Carapicuiba</string>
+
+    <string name="london">London, die Hauptstadt Englands und des Vereinigten Königreichs, ist eine Stadt des 21. Jahrhunderts mit einer Geschichte, die bis in die Römerzeit zurückreicht.</string>
+    <string name="porto">Porto ist eine Küstenstadt im Nordwesten Portugals, die für ihre imposanten Brücken und die Portweinproduktion bekannt ist.</string>
+    <string name="ontario">Ontario ist eine Provinz in Kanada, die an die Vereinigten Staaten und die Großen Seen grenzt.</string>
+    <string name="paris">Frankreich in Westeuropa hat mittelalterliche Städte, Bergdörfer und Mittelmeerstrände.</string>
+    <string name="osasco">Osasco ist eine brasilianische Gemeinde in der Metropolregion São Paulo im brasilianischen Bundesstaat São Paulo.</string>
+    <string name="carapicuiba">Carapicuíba ist eine Gemeinde im brasilianischen Bundesstaat São Paulo und gehört zur Metropolregion São Paulo.</string>
 
 </resources>
