@@ -1,6 +1,10 @@
 package com.example.mytrips.screens
 
+import android.graphics.Paint.Align
+import android.text.Layout
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -78,13 +82,16 @@ fun GreetingLogin(controleNavegacao: NavHostController) {
         Column(
             modifier = Modifier
                 // tamanho dessa coluninha filha
-                .size(height = 350.dp, width = 500.dp)
+                .padding(end = 12.dp)
+                .size(height = 500.dp, width = 500.dp),
+            Arrangement.Center,
+            Alignment.CenterHorizontally
 
 // .dp == Para itens: COLUMN, BOX, ROW, CARD, ETC
                 // .sp == Para fontes
 
                 // margem personalizada p poder dar o espacamento para cima e um pouquinho em baixo p n ficar grudado
-                .padding(top = 100.dp, end = 10.dp, start = 10.dp)
+
         ) {
 
             var emailState = remember {
@@ -177,7 +184,6 @@ fun GreetingLogin(controleNavegacao: NavHostController) {
                     }
 
                 }) {
-                1
 
                 // text dentro del button
                 Text(
@@ -197,11 +203,8 @@ fun GreetingLogin(controleNavegacao: NavHostController) {
             Row(
                 modifier = Modifier
                     .align(Alignment.End)
-                    .padding(end = 10.dp, top = 4.dp)
+
             ) {
-                TextButton(
-                    modifier = Modifier.offset(x = 240.dp),
-                    onClick = { controleNavegacao.navigate("SingUp") }) {}
                 Text(
                     modifier = Modifier
                         .padding(end = 12.dp),
@@ -209,7 +212,8 @@ fun GreetingLogin(controleNavegacao: NavHostController) {
                     text = stringResource(id = R.string.dont_have_an_account)
                 )
                 Text(
-                    modifier = Modifier,
+                    modifier = Modifier
+                        .clickable { controleNavegacao.navigate("SingUp") },
                     color = Color(0xffCF06F0),
                     fontWeight = FontWeight.ExtraBold,
                     text = stringResource(id = R.string.sign_up)

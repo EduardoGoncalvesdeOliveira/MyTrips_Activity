@@ -1,8 +1,11 @@
 package com.example.mytrips.screens
 
+import android.graphics.drawable.GradientDrawable
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -34,6 +37,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -90,7 +94,8 @@ fun GreetingSignUp(controleNavegacao: NavHostController) {
                 .align(Alignment.CenterHorizontally)
                 .size(height = 120.dp, width = 100.dp)
                 .padding(top = 20.dp), shape = CircleShape,
-            border = BorderStroke(2.dp, Color(0xffCF06F0))
+            border = BorderStroke(width = 2.dp, brush = Brush.horizontalGradient(listOf(Color.Magenta, Color.White))
+            )
 
             // basicamente... preparei ele p receber a imagem
 
@@ -124,8 +129,9 @@ fun GreetingSignUp(controleNavegacao: NavHostController) {
 
         Column(
             modifier = Modifier
-                .fillMaxHeight()
-                .align(Alignment.CenterHorizontally)
+                .fillMaxHeight(),
+            Arrangement.Center,
+            Alignment.CenterHorizontally
         ) {
 
             var usernameState = remember {
@@ -251,10 +257,11 @@ fun GreetingSignUp(controleNavegacao: NavHostController) {
             }
 
             // row posicionada no start
-            Row {
+            Row (modifier = Modifier
+                .size(height = 80.dp, width = 330.dp),
+                Arrangement.Start,
+                Alignment.CenterVertically){
                 Checkbox(
-                    modifier = Modifier
-                        .offset(y = 18.dp, x = 24.dp),
                     checked = overState.value, onCheckedChange = {
                         overState.value = it
                     },
@@ -265,7 +272,6 @@ fun GreetingSignUp(controleNavegacao: NavHostController) {
                 )
 
                 Text(
-                    modifier = Modifier.padding(top = 30.dp, start = 20.dp),
                     fontSize = 17.sp,
                     text = stringResource(id = R.string.over_18)
                 )
@@ -286,11 +292,7 @@ fun GreetingSignUp(controleNavegacao: NavHostController) {
                 )
             }
 
-            Row(
-                modifier = Modifier
-                    .align(Alignment.End)
-                    .padding(end = 30.dp, top = 10.dp)
-            ) {
+            Row{
                 Text(
                     modifier = Modifier
                         .padding(end = 12.dp),
@@ -299,7 +301,8 @@ fun GreetingSignUp(controleNavegacao: NavHostController) {
                 )
 
                 Text(
-                    modifier = Modifier,
+                    modifier = Modifier
+                    .clickable { controleNavegacao.navigate("Login") },
                     color = Color(0xffCF06F0),
                     fontWeight = FontWeight.ExtraBold,
                     text = stringResource(id = R.string.sign_in_sign_up)

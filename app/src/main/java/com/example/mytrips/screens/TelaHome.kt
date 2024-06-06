@@ -65,6 +65,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.layout.HorizontalAlignmentLine
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
@@ -73,6 +74,7 @@ import com.example.mytrips.repositorio.ViagemRepositorio
 import com.example.mytrips.ui.theme.MyTripsTheme
 import com.example.mytrips.utilitarios.encurtaDatas
 import com.example.mytrips.modelo.Viagem
+import org.intellij.lang.annotations.JdkConstants.HorizontalAlignment
 import kotlin.time.Duration.Companion.days
 
 
@@ -183,18 +185,17 @@ fun GreetingHome(controleNavegacao: NavHostController) {
                         LazyRow {
                             item() {
                                 Card(
-                                    modifier = Modifier.padding(horizontal = 8.dp)
+                                    modifier = Modifier
+                                        .padding(horizontal = 8.dp),
                                 ) {
                                     Column(
-
                                         modifier = Modifier
                                             .size(height = 80.dp, width = 130.dp)
-                                            .background(color = Color(0xffCF06F0))
-                                            .padding(18.dp)
-                                            .padding(start = 18.dp),
+                                            .background(color = Color(0xffCF06F0)),
+                                        Arrangement.Center,
+                                        Alignment.CenterHorizontally
                                     ) {
                                         Icon(
-                                            modifier = Modifier.padding(start = 16.dp),
                                             imageVector = Icons.Default.Landscape,
                                             contentDescription = "",
                                             tint = Color.White
@@ -209,24 +210,21 @@ fun GreetingHome(controleNavegacao: NavHostController) {
                             }
                             item() {
                                 Card(
-                                    modifier = Modifier.padding(start = 2.dp)
+                                    modifier = Modifier
                                 ) {
                                     Column(
-
                                         modifier = Modifier
                                             .size(height = 80.dp, width = 130.dp)
-                                            .background(color = Color(0xffEAABF4))
-                                            .padding(18.dp)
-                                            .padding(start = 20.dp),
+                                            .background(color = Color(0xffEAABF4)),
+                                        Arrangement.Center,
+                                        Alignment.CenterHorizontally
                                     ) {
                                         Icon(
-                                            modifier = Modifier.padding(start = 16.dp),
                                             imageVector = Icons.Default.DownhillSkiing,
                                             contentDescription = "",
                                             tint = Color.White
                                         )
                                         Text(
-                                            modifier = Modifier.padding(start = 7.dp),
                                             text = stringResource(id = R.string.snow),
                                             color = Color.White
                                         )
@@ -242,18 +240,16 @@ fun GreetingHome(controleNavegacao: NavHostController) {
 
                                         modifier = Modifier
                                             .size(height = 80.dp, width = 130.dp)
-                                            .background(color = Color(0xffEAABF4))
-                                            .padding(18.dp)
-                                            .padding(start = 20.dp),
+                                            .background(color = Color(0xffEAABF4)),
+                                        Arrangement.Center,
+                                        Alignment.CenterHorizontally
                                     ) {
                                         Icon(
-                                            modifier = Modifier.padding(start = 16.dp),
                                             imageVector = Icons.Default.BeachAccess,
                                             contentDescription = "",
                                             tint = Color.White
                                         )
                                         Text(
-                                            modifier = Modifier.padding(start = 7.dp),
                                             text = stringResource(id = R.string.beach),
                                             color = Color.White
 
